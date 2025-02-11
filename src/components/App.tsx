@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import {TodoList} from "./TodoList";
 import {ITodo} from "../types/data";
 import { title } from "process";
+import './App.css';
 
 const App: React.FC = () => {
     const [value, setValue] = useState('');
@@ -35,13 +36,15 @@ const App: React.FC = () => {
         }))
     }
 
-    return <div>
-        <div>
-            <input value={value} onChange={handleChange}/>
-            <button onClick={addTodos}>Add</button>
-    </div>
-    <TodoList items={todos} removeTodos={removeTodos} toggleTodos={toggleTodos} />
-    </div>
+    return <><header>
+            Quick To-do-list
+        </header><div className='container'>
+        <div className='inputContainer'>
+            <input className='input' value={value} onChange={handleChange} />
+            <button className='button' onClick={addTodos}>Add</button>
+        </div>
+        <TodoList items={todos} removeTodos={removeTodos} toggleTodos={toggleTodos} />
+    </div></>
 }
 
 export { App } 

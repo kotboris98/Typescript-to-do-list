@@ -1,4 +1,5 @@
 import {ITodo} from '../types/data'
+import './TodoList.css';
 
 interface ITodoItem extends ITodo {
     removeTodos: (id: number) => void
@@ -8,8 +9,8 @@ interface ITodoItem extends ITodo {
 const TodoItem: React.FC<ITodoItem> = (props) => {
     const {id, title, complete, removeTodos, toggleTodos} = props;
 
-    return <div>
-        <input type='checkbox' checked={complete} onChange={() => toggleTodos(id)} />
+    return <div className='todoItem'>
+        <input className='todoList' type='checkbox' checked={complete} onChange={() => toggleTodos(id)} />
         {title}
         <button onClick={() => removeTodos(id)}>x</button>
     </div>
