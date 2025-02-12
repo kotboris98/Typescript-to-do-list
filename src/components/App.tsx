@@ -36,15 +36,18 @@ const App: React.FC = () => {
         }))
     }
 
-    return <><header>
-            Quick To-do-list
-        </header><div className='container'>
-        <div className='inputContainer'>
-            <input className='input' value={value} onChange={handleChange} />
-            <button className='button' onClick={addTodos}>Add</button>
-        </div>
-        <TodoList items={todos} removeTodos={removeTodos} toggleTodos={toggleTodos} />
-    </div></>
+    return <><><header>
+        Quick To-do-list
+    </header><div className='container'>
+            <div className='inputContainer'>
+                <input className='input' value={value} onChange={handleChange} />
+                <button className='button' onClick={addTodos}>Add</button>
+            </div>
+            <TodoList items={todos} removeTodos={removeTodos} toggleTodos={toggleTodos} />
+        </div></><footer>
+            <p>Developed and designed by <span>Boris Tyukov</span></p>
+            <p>2025</p>
+        </footer></>
 }
 
 export { App } 

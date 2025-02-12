@@ -1,16 +1,15 @@
 .todoList {
-    margin-top: 50px;
     padding: 0;
     list-style: none;
   }
   
   .todoItem {
     background-color: #f4f4f4;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     display: flex;
-    column-gap: 10px;
+    column-gap: 20px;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -26,12 +25,16 @@
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 2px 4px;
+    padding: 2px 2px;
     cursor: pointer;
   }
   
   button:hover {
     background-color: darkred;
+  }
+
+  .button__remove {
+    font-size: x-small;
   }
 
   header {
@@ -44,3 +47,25 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
+  .title {
+    width: 400px;
+    font-weight: 500;
+  }
+
+  footer {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+}
+  footer span {
+    font-weight: bold;
+}
